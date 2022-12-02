@@ -57,3 +57,25 @@ console.log([...dataArr, dataObj]);
  */
 
 console.log({ ...dataObj, salary: 50000 });
+
+const person = {
+    name: 'khazi',
+    age: 30,
+    company: {
+        name: 'Google',
+        designation: 'Software Engineer III',
+        role: {
+            name: 'Developer III'
+        },
+        accessList: [{
+            name: 'admin'
+        }, {
+            name: 'user-admin'
+        }]
+    }
+};
+
+const { company: { designation, role:{ name: roleName }, accessList: [  , { name: accessName } ] } } = person;
+console.log(designation);//Software Engineer III
+console.log(roleName);//Developer III
+console.log(accessName); //user-admin
