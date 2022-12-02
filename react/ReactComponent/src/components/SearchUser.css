@@ -1,0 +1,12 @@
+.formContainer {
+    margin: auto;
+    text-align: center;
+    margin: 10px;
+}
+.searchInput {
+    float: right;
+    height: 100%;
+}
+.submitBtn {
+    float: left;
+}

@@ -1,0 +1,20 @@
+.titleContainer {
+    background-color: black;
+    color:  white;
+}
+.title {
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+}
+.logoutBtn {
+    all: unset;
+    margin: 10px 10px 0 0;
+    align-self: flex-end;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+}
+.logoutBtn:hover {
+    color: #0041C2;
+}

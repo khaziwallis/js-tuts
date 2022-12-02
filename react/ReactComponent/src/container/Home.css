@@ -1,0 +1,16 @@
+html,
+body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* needed for container min-height */
+}
+.marqueeText {
+    font-size: 16px;
+}
+.searchText {
+    color: green;
+    font-size: 20px;
+}
+.appContainer {
+    min-height: 100%;
+}
