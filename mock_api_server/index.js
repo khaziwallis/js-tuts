@@ -2,7 +2,9 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var { USERS } = require('./mock-data/user');
+
 app.use(bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
@@ -18,6 +20,14 @@ app.get('/employee', (req, res) => {
         "age": 34,
         "company": 'Google'
     });
+});
+
+app.post('/login', (req, res) => {
+    var { userName, password } = req.body;
+    const result = USERS?.[userName] || {
+        message: 'User Not Found!'
+    };
+    res.send(result);
 });
 
 app.post('/addEmployee', (req, res) => {
