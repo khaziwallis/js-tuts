@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './App';
+import { UserContextProvider } from './contextProvider/UserContextProvider';
 
 // html from index.html
 const element = document.getElementById('root');
@@ -7,10 +9,8 @@ const element = document.getElementById('root');
 // create root element 
 const root = ReactDOM.createRoot(element);
 
-const App = () => {
-    return (
-        <div> my First React App</div>
-    )
-};
-
-root.render(<App />);
+root.render(
+  <UserContextProvider initalValue={{}}>
+    <App />
+  </UserContextProvider>
+);
